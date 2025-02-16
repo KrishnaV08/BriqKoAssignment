@@ -28,6 +28,11 @@ input {
 input[type="date"] {
   width: 10%; /* Date input takes full width */
 }
+.save{
+    margin-left:10% ;
+    padding: 12px;
+    width: 50%;
+  }
 
 button {
   background-color: #007bff;
@@ -52,15 +57,19 @@ button:hover {
     margin: 20px;
 
   }
+div{
+    margin: 0px;
+}
 
   input {
-    width: 100%; /* Inputs take full width on small screens */
+    width: 90%;
+/* Inputs take full width on small screens */
   }
   input[type="date"] {
     width: 50%; /* Date input takes full width */
   }
   .save{
     margin-left:0 ;
-    width: 50%;
+    width: 90%;
   }
 }

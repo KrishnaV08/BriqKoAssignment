@@ -16,6 +16,7 @@ function AddDetails() {
   const handleSubmit = () => {
     const client = localStorage.getItem("selectedClient");
     const item = localStorage.getItem("selectedItem");
+    
 
     if (!client || !item) {
       alert("Client or item missing! Please restart the process.");
@@ -31,6 +32,11 @@ function AddDetails() {
       measurement,
       date, // Store the selected date
     };
+    if(description==="" || brief==="" || measurement==="" ){
+      alert("Fields cannot be empty.");
+      return;
+
+    }
 
     const storedBills = JSON.parse(localStorage.getItem("bills")) || [];
     const updatedBills = [...storedBills, newBill];
@@ -50,6 +56,7 @@ function AddDetails() {
         type="text"
         placeholder="Description"
         value={description}
+        required
         onChange={(e) => setDescription(e.target.value)}
       />
       <input
@@ -57,6 +64,7 @@ function AddDetails() {
         type="text"
         placeholder="Brief"
         value={brief}
+        required
         onChange={(e) => setBrief(e.target.value)}
       />
       <input
@@ -64,6 +72,7 @@ function AddDetails() {
         type="number"
         placeholder="Measurement"
         value={measurement}
+        required
         onChange={(e) => setMeasurement(e.target.value)}
       />
 
@@ -71,6 +80,7 @@ function AddDetails() {
         style={{ marginRight: "20px", padding: "10px", borderRadius: "6px" }}
         type="date"
         value={date}
+        required
         max={today} // Restricts selection to past and present dates
         onChange={(e) => setDate(e.target.value)}
       />

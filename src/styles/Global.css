@@ -8,9 +8,11 @@
 
 body {
   background-color: rgba(181, 189, 238, 0.364);
-
+    height: 100vh;
   color: #333;
 }
+
+
 
 .container {
   max-width: 800px;
@@ -38,11 +40,15 @@ button:hover {
 }
 @media (max-width: 600px) {
   .container {
-    width: 90%;
+    width: 100%;
     padding: 15px;
+
   }
+
 
   button {
     width: 100%;
+    margin: 0;
+    
   }
 }

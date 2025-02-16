@@ -33,7 +33,13 @@ function ViewBills() {
       {bills.length === 0 ? (
         <>
           <p>No bills added yet.</p>
-          <button className="add-bill-btn" onClick={() => navigate("/select-client")}>
+          <button
+          style={{
+            width:"10%"
+          }}
+            class="add-bill-btn"
+            onClick={() => navigate("/select-client")}
+          >
             Add Bills
           </button>
         </>
@@ -41,22 +47,40 @@ function ViewBills() {
         <ul className="bill-list">
           {bills.map((bill, index) => (
             <li key={index} className="bill-item">
-              <span><strong>Client:</strong> {bill.client}</span>
-              <span><strong>Item:</strong> {bill.item}</span>
-              <span><strong>Description:</strong> {bill.description}</span>
-              <span><strong>Brief:</strong> {bill.brief}</span>
-              <span><strong>Measurement:</strong> {bill.measurement}</span>
-              <span><strong>Date:</strong> {bill.date}</span>
-              <button className="delete-btn" onClick={() => deleteBill(index)}>Delete</button>
+              <span>
+                <strong>Client:</strong> {bill.client}
+              </span>
+              <span>
+                <strong>Item:</strong> {bill.item}
+              </span>
+              <span>
+                <strong>Description:</strong> {bill.description}
+              </span>
+              <span>
+                <strong>Brief:</strong> {bill.brief}
+              </span>
+              <span>
+                <strong>Measurement:</strong> {bill.measurement}
+              </span>
+              <span>
+                <strong>Date:</strong> {bill.date}
+              </span>
+              <button className="delete-btn" onClick={() => deleteBill(index)}>
+                Delete
+              </button>
             </li>
           ))}
         </ul>
       )}
 
-      <button className="delete-all-btn" onClick={handleDeleteAll}>
-        Delete All Bills
+{bills.length > 0 && (
+            <button className="delete-all-btn" onClick={handleDeleteAll}>
+              Delete All Bills
+            </button>
+          )}
+      <button className="home-btn" onClick={() => navigate("/")}>
+        Home
       </button>
-      <button className="home-btn" onClick={() => navigate("/")}>Home</button>
     </div>
   );
 }

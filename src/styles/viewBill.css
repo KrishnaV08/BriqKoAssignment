@@ -35,20 +35,25 @@ button {
 }
 
 .delete-btn {
-  background: red;
+  background: rgb(244, 0, 0);
   color: white;
 }
 
 .delete-all-btn {
-  background: #ff4d4d;
+  background: #ff0000;
   color: white;
   margin-top: 20px;
+  width: 10%;
 }
+
+
+
 
 .home-btn {
   background: #007bff;
   color: white;
-  margin-left: 10px;
+  margin-left: 0px;
+  width: 10%;
 }
 
 /* 📱 Responsive Design */
@@ -66,5 +71,14 @@ button {
 
   .delete-btn {
     align-self: flex-end;
+    width: 100%;
+  }
+  .delete-all-btn {
+    width: 100%;
+  }
+  .home-btn {
+    
+    margin-left: 0px;
+    width: 100%;
   }
 }
