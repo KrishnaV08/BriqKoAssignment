@@ -1,0 +1,19 @@
+/* CreateBill.css */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  

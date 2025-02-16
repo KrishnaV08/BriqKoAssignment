@@ -1,0 +1,48 @@
+/* Global.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgba(181, 189, 238, 0.364);
+
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: 50px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
