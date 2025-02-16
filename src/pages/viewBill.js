@@ -34,9 +34,7 @@ function ViewBills() {
         <>
           <p>No bills added yet.</p>
           <button
-          style={{
-            width:"10%"
-          }}
+          
             class="add-bill-btn"
             onClick={() => navigate("/select-client")}
           >

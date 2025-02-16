@@ -46,8 +46,9 @@ button {
   width: 10%;
 }
 
-
-
+.add-bill-btn {
+  width: 10%;
+}
 
 .home-btn {
   background: #007bff;
@@ -68,7 +69,9 @@ button {
     text-align: left;
     width: 100%;
   }
-
+  .add-bill-btn {
+    width: 100%;
+  }
   .delete-btn {
     align-self: flex-end;
     width: 100%;
@@ -77,7 +80,6 @@ button {
     width: 100%;
   }
   .home-btn {
-    
     margin-left: 0px;
     width: 100%;
   }
