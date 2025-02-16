@@ -33,13 +33,6 @@ function ViewBills() {
       {bills.length === 0 ? (
         <>
           <p>No bills added yet.</p>
-          <button
-          
-            class="add-bill-btn"
-            onClick={() => navigate("/select-client")}
-          >
-            Add Bills
-          </button>
         </>
       ) : (
         <ul className="bill-list">
@@ -71,13 +64,13 @@ function ViewBills() {
         </ul>
       )}
 
-{bills.length > 0 && (
-            <button className="delete-all-btn" onClick={handleDeleteAll}>
-              Delete All Bills
-            </button>
-          )}
-      <button className="home-btn" onClick={() => navigate("/")}>
-        Home
+      {bills.length > 0 && (
+        <button className="delete-all-btn" onClick={handleDeleteAll}>
+          Delete All Bills
+        </button>
+      )}
+      <button className="home-btn" onClick={() => navigate("/select-client")}>
+        Add More Bills
       </button>
     </div>
   );
