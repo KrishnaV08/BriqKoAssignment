@@ -1,53 +1,66 @@
+/* AddDetails.css */
 .add-details-container {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 30%; /* Two inputs per row */
+}
+
+input[type="date"] {
+  width: 10%; /* Date input takes full width */
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
   .input-group {
-    display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    align-items: center;
+    margin: 20px;
+
   }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
+
   input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    width: 100%; /* Inputs take full width on small screens */
   }
-  
-  input:focus {
-    border-color: #007bff;
-    outline: none;
+  input[type="date"] {
+    width: 50%; /* Date input takes full width */
   }
-  
-  button {
-    width: 100%;
-    padding: 12px;
-    background: #007bff;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
+  .save{
+    margin-left:0 ;
+    width: 50%;
   }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
+}

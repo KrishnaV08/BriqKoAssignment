@@ -1,0 +1,70 @@
+/* ViewBills.css */
+.view-bills-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.bill-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 90vw;
+  margin: 28px auto;
+}
+
+.bill-item {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  word-break: break-word; /* Ensures text wraps */
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+}
+
+.delete-all-btn {
+  background: #ff4d4d;
+  color: white;
+  margin-top: 20px;
+}
+
+.home-btn {
+  background: #007bff;
+  color: white;
+  margin-left: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .bill-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .bill-item span {
+    text-align: left;
+    width: 100%;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+}

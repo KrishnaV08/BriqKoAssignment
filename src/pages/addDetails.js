@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../styles/addDet.css";
 import { useNavigate } from "react-router-dom";
 
 function AddDetails() {
@@ -66,15 +66,15 @@ function AddDetails() {
         value={measurement}
         onChange={(e) => setMeasurement(e.target.value)}
       />
-      <label>Select Date:</label>
+
       <input
-        style={{ marginR: "20px", padding: "10px", borderRadius: "6px" }}
+        style={{ marginRight: "20px", padding: "10px", borderRadius: "6px" }}
         type="date"
         value={date}
         max={today} // Restricts selection to past and present dates
         onChange={(e) => setDate(e.target.value)}
       />
-      <button onClick={handleSubmit}>Save Bill</button>
+      <button class="save" onClick={handleSubmit}>Save Bill</button>
     </div>
   );
 }
