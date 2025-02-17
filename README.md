@@ -1,4 +1,4 @@
-# Briqko Assignment
+# Briqko Assignment (https://briq-ko-assignment.vercel.app/)
 
 # Overview
 
