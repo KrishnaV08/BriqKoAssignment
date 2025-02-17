@@ -15,7 +15,10 @@ function ViewBills() {
 
   useEffect(() => {
     const storedBills = JSON.parse(localStorage.getItem("bills")) || [];
-    setBills(storedBills);
+    const sortedBills = storedBills.sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    ); // Sort by date (latest first)
+    setBills(sortedBills);
   }, []);
 
   const deleteBill = (index) => {
